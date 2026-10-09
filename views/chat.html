@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chats · CollegeConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="nav"></header>
+  <main class="chat-layout" id="layout">
+    <aside class="sidebar" aria-label="Conversations">
+      <div class="sidebar-head">
+        <input id="convSearch" type="search" placeholder="Search chats" aria-label="Search chats">
+        <a class="btn btn-small" href="/dashboard">➕ Find students</a>
+      </div>
+      <ul class="conv-list" id="convList"></ul>
+    </aside>
+
+    <section class="thread" id="thread">
+      <div class="state" id="threadEmpty">
+        <div class="emoji">💬</div>
+        <h3>Select a conversation</h3>
+        <p>Pick a chat on the left or <a href="/dashboard">find a student</a> to message.</p>
+      </div>
+
+      <div class="thread-main" id="threadMain" hidden>
+        <div class="thread-head">
+          <button class="icon-btn back-btn" id="backBtn" type="button" aria-label="Back to chats">←</button>
+          <span id="headAvatar"></span>
+          <div class="who">
+            <div class="name" id="headName"></div>
+            <div class="status" id="headStatus"></div>
+          </div>
+          <button class="btn btn-ghost btn-small" id="blockBtn" type="button">Block</button>
+        </div>
+        <div class="banner" id="connBanner" hidden>Reconnecting…</div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+        <form class="composer" id="composer">
+          <textarea id="input" rows="1" maxlength="2000" placeholder="Type a message..." aria-label="Message"></textarea>
+          <button class="btn" id="sendBtn" type="submit">Send</button>
+        </form>
+        <div class="composer-note" id="composerNote" hidden></div>
+      </div>
+    </section>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>

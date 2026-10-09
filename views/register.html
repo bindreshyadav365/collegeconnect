@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up · CollegeConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <button class="icon-btn theme-float" id="themeBtn" type="button" aria-label="Toggle dark mode">🌙</button>
+  <main class="auth-wrap">
+    <form class="auth-card" id="form" novalidate>
+      <h1 class="brand">College<span>Connect</span></h1>
+      <p class="sub">Create your student account.</p>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" autocomplete="name" maxlength="60" required>
+        <span class="error" data-err="name"></span>
+      </div>
+      <div class="field">
+        <label for="email">College email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <span class="error" data-err="email"></span>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <span class="hint">At least 8 characters, with a letter and a number.</span>
+        <span class="error" data-err="password"></span>
+      </div>
+      <div class="field">
+        <label for="college">College</label>
+        <input id="college" name="college" maxlength="100" required>
+        <span class="error" data-err="college"></span>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="branch">Branch</label>
+          <input id="branch" name="branch" maxlength="100" placeholder="e.g. Computer Science" required>
+          <span class="error" data-err="branch"></span>
+        </div>
+        <div class="field">
+          <label for="year">Year</label>
+          <select id="year" name="year" required>
+            <option value="1">1st year</option>
+            <option value="2">2nd year</option>
+            <option value="3">3rd year</option>
+            <option value="4">4th year</option>
+            <option value="5">5th year</option>
+            <option value="6">6th year</option>
+          </select>
+          <span class="error" data-err="year"></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="bio">Bio / status (optional)</label>
+        <input id="bio" name="bio" maxlength="200">
+        <span class="error" data-err="bio"></span>
+      </div>
+      <span class="error" id="formError" role="alert"></span>
+      <button class="btn" id="submit" type="submit">Create account</button>
+      <p class="auth-foot">Already registered? <a href="/login">Log in</a></p>
+    </form>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/register.js"></script>
+</body>
+</html>

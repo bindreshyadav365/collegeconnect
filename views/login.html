@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in · CollegeConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <button class="icon-btn theme-float" id="themeBtn" type="button" aria-label="Toggle dark mode">🌙</button>
+  <main class="auth-wrap">
+    <form class="auth-card" id="form" novalidate>
+      <h1 class="brand">College<span>Connect</span></h1>
+      <p class="sub">Log in to chat with students from your college.</p>
+      <div class="field">
+        <label for="email">College email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <span class="error" id="formError" role="alert"></span>
+      </div>
+      <button class="btn" id="submit" type="submit">Log in</button>
+      <p class="auth-foot">New here? <a href="/register">Create an account</a></p>
+    </form>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

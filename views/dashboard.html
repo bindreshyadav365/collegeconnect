@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find students · CollegeConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="nav"></header>
+  <main class="container">
+    <h1 class="page-title">Find students</h1>
+    <p class="page-sub">Search by name, college, branch or year and start a private chat.</p>
+
+    <form class="filters" id="filters" role="search">
+      <div class="field"><label for="q">Name</label><input id="q" type="search" placeholder="Search by name"></div>
+      <div class="field"><label for="college">College</label><input id="college" type="search" placeholder="Any college"></div>
+      <div class="field"><label for="branch">Branch</label><input id="branch" type="search" placeholder="Any branch"></div>
+      <div class="field">
+        <label for="year">Year</label>
+        <select id="year">
+          <option value="">Any year</option>
+          <option value="1">1st year</option><option value="2">2nd year</option><option value="3">3rd year</option>
+          <option value="4">4th year</option><option value="5">5th year</option><option value="6">6th year</option>
+        </select>
+      </div>
+    </form>
+
+    <div id="state" class="state" hidden></div>
+    <section id="results" class="grid" aria-live="polite"></section>
+    <div class="center-row"><button class="btn btn-ghost" id="more" type="button" hidden>Load more</button></div>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

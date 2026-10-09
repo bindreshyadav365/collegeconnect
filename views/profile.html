@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile · CollegeConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="nav"></header>
+  <main class="container">
+    <h1 class="page-title">Your profile</h1>
+    <p class="page-sub">This is what other students see when they find you.</p>
+    <div class="profile-grid">
+      <section class="card avatar-box">
+        <div id="avatarHolder"></div>
+        <h2 id="pName" class="tight"></h2>
+        <p class="hint tight-b" id="pEmail"></p>
+        <label class="btn btn-ghost btn-small" for="avatarFile">Change photo</label>
+        <input id="avatarFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+        <p class="hint">JPG, PNG, GIF or WebP, up to 2 MB.</p>
+      </section>
+
+      <div>
+        <form class="card" id="form" novalidate>
+          <div class="field"><label for="name">Name</label><input id="name" maxlength="60" required><span class="error" data-err="name"></span></div>
+          <div class="field"><label for="college">College</label><input id="college" maxlength="100" required><span class="error" data-err="college"></span></div>
+          <div class="field-row">
+            <div class="field"><label for="branch">Branch</label><input id="branch" maxlength="100" required><span class="error" data-err="branch"></span></div>
+            <div class="field">
+              <label for="year">Year</label>
+              <select id="year">
+                <option value="1">1st year</option><option value="2">2nd year</option><option value="3">3rd year</option>
+                <option value="4">4th year</option><option value="5">5th year</option><option value="6">6th year</option>
+              </select>
+              <span class="error" data-err="year"></span>
+            </div>
+          </div>
+          <div class="field"><label for="bio">Bio / status</label><textarea id="bio" rows="3" maxlength="200"></textarea><span class="error" data-err="bio"></span></div>
+          <button class="btn" id="save" type="submit">Save changes</button>
+        </form>
+
+        <section class="card mt-16">
+          <h3 class="mt-0">Blocked students</h3>
+          <div id="blockedState" class="hint">Loading…</div>
+          <ul class="blocked-list" id="blocked"></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+</html>
